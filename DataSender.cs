@@ -1,9 +1,9 @@
-    using System.Collections.Generic;
+﻿    using System.Collections.Generic;
     using System;
-
-namespace BMSSender
+    
+namespace nameSpace
 { 
-    public class Sender
+    public static class BatteryData
 {
     public static int numOfSamples = 50;
 
@@ -33,7 +33,7 @@ namespace BMSSender
         string sensorTwo,
         int sensorTwoValue)
     {
-        return String.Format("{0}:{1}, {2}:{3}, {4}:{5}\n","SampleNum", sampleNum, sensorOne, sensorOneValue, sensorTwo, sensorTwoValue);
+        return String.Format("{0}={1}, {2}={3}, {4}={5}\n","SampleNum", sampleNum, sensorOne, sensorOneValue, sensorTwo, sensorTwoValue);
     }
 
     public static void PrintData(object data)
@@ -54,5 +54,5 @@ namespace BMSSender
         SendData(numOfSamples);
     }
 
- }
+}
 }
