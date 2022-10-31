@@ -9,6 +9,8 @@ jobs:
         configuration:
           - Debug
     runs-on: windows-latest
+    env:
+      Solution_Name: DataSender.sln
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -18,5 +20,7 @@ jobs:
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 3.1.101
+      - name: Run command
+        run: dotnet test
       
 
